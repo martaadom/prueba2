@@ -28,7 +28,7 @@ export default class Game extends React.Component {
         } else {
             return(
                 <View>
-                  <Text style={styles.congrats}>Congratulations! You have finished the quiz</Text>
+                  <Text style={styles.congrats}>Congratulations, you have finished the quiz!!!!!</Text>
                   <Text style={styles.score}>SCORE: {this.props.score}</Text>
                     <MyButton name="Reset"
                               onReset={this.props.onReset}/>

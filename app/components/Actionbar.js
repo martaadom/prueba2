@@ -7,7 +7,7 @@ export default class Actionbar extends React.Component {
     render() {
         return (
 
-            <View>
+            <View style={styles.positionButton}>
                 <MyButton lengthQuestions={this.props.lenghtQuestions}
                           currentQuestion={this.props.currentQuestion}
                           onChangeQuestion={this.props.onChangeQuestion}
