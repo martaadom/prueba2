@@ -6,7 +6,7 @@ export default class Navbar extends React.Component {
 
     render() {
         return (
-            <Text style={styles.header}>QUIZ GAME</Text>
+            <Text style={styles.header}>QUIZ GAME con REACT-NATIVE</Text>
         );
     }
 
@@ -17,5 +17,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 25,
         padding:10,
+        fontWeight: 'bold',
+        marginTop:5,
     }
 })

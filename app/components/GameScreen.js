@@ -47,7 +47,7 @@ class GameScreen extends Component {
         } else {
         return (
 
-            <View style = {{flex:1, margin:10, justifyContent:'flex-start'}}>
+            <View style = {{flex:1, margin:10,backgroundColor:'pink', justifyContent:'flex-start'}}>
                 <Navbar/>
                 <Game currentQuestion={this.props.currentQuestion}
                       lengthQuestions={this.props.questions.length}

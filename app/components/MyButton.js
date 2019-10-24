@@ -59,6 +59,7 @@ export default class MyButton extends React.Component {
                         <Text style={styles.buttontext}>{this.props.name}</Text>
                     </TouchableHighlight>
                 );
+
         }
 
 
