@@ -5,7 +5,7 @@ export default class Author extends React.Component{
     render(){
         return(
             <View>
-                <Text> {this.props.author.username}</Text>
+                <Text> created by: {this.props.question.author.username}</Text>
             </View>
         )
     }

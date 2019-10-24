@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Game from './Game';
 import Navbar from "./Navbar";
-import {View} from 'react-native';
+import {View,Text} from 'react-native';
 import { questionAnswer } from './../reducers/actions';
 import { changeQuestion } from './../reducers/actions';
 import { submit } from './../reducers/actions';
@@ -24,6 +24,7 @@ class GameScreen extends Component {
             })
             .then(questionsDownloaded => {
                 this.props.dispatch(initQuestions(questionsDownloaded));
+                console.log(questionsDownloaded);
             });
 
     }
@@ -36,6 +37,14 @@ class GameScreen extends Component {
 
 
     render() {
+        console.log(this.props.finished)
+         if (this.props.questions.length === 0) {
+            return (
+                <View>
+                    <Text> CARGANDO </Text>
+                </View>
+            )
+        } else {
         return (
 
             <View style = {{flex:1, margin:10, justifyContent:'flex-start'}}>
@@ -61,7 +70,7 @@ class GameScreen extends Component {
                 />
             </View>);
     }
-}
+}}
 
 
 

@@ -13,10 +13,13 @@ export default class Content extends React.Component {
             return (
                 <View style={{flex:1}}>
                     <Image style={{flex:5}} source={{uri: this.props.question.attachment.url}}/>
-                    <Text >{this.props.question.question}</Text>
-                    <TextInput style={{flex:1}} value={this.props.question.userAnswer || ""} placeholder="Escribe tu respuesta" type="text"
-                               onChangeText={(e)=>{this.props.onQuestionAnswer(e);
-                               }}/>
+                    <Text >QUESTION { this.props.currentQuestion + 1}:{this.props.question.question}</Text>
+                    <TextInput style={{flex:1}}
+                               value={this.props.question.userAnswer || ""}
+                               placeholder="Type your answer"
+                               type="text"
+                               onChangeText={(e)=>{this.props.onQuestionAnswer(e);}
+                               }/>
                     <View style={{flex:3}}>
                         <Text>Tips:</Text>
                         {this.props.question.tips.length === 0 ?

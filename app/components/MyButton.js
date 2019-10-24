@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableHiglight, StyleSheet} from 'react-native';
+import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
 
 
 export default class MyButton extends React.Component {
@@ -31,35 +31,36 @@ export default class MyButton extends React.Component {
         switch (this.props.name){
             case "Previous":
                 return (
-                    <TouchableHiglight disabled={this.activateButton(this.props.currentQuestion)}
+                    <TouchableHighlight disabled={this.activateButton(this.props.currentQuestion)}
                                        onPress={()=>this.props.onChangeQuestion(this.props.currentQuestion-1)}
                                        style={styles.bprevious}>
                         <Text style={styles.buttontext}>{this.props.name}</Text>
-                    </TouchableHiglight>
+                    </TouchableHighlight>
                 );
             case "Next":
                 return (
-                    <TouchableHiglight   disabled={this.activateButton(this.props.currentQuestion)}
-                                         onPress={()=>this.props.onChangeQuestion(this.props.currentQuestion+1)}
-                                         style={styles.bnext}>
+                    <TouchableHighlight disabled={this.activateButton(this.props.currentQuestion)}
+                                        onPress={()=>this.props.onChangeQuestion(this.props.currentQuestion+1)}
+                                        style={styles.bnext}>
                         <Text style={styles.buttontext}>{this.props.name}</Text>
-                    </TouchableHiglight>
+                    </TouchableHighlight>
                 );
             case "Submit":
                 return (
-                    <TouchableHiglight   disabled={this.activateButton(this.props.currentQuestion)}
+                    <TouchableHighlight   disabled={this.activateButton(this.props.currentQuestion)}
                                          onPress={()=>this.props.onSubmit(this.props.questions)}
                                          style={styles.bsubmit}>
                         <Text style={styles.buttontext}>{this.props.name}</Text>
-                    </TouchableHiglight>
+                    </TouchableHighlight>
                 );
             case "Reset":
                 return (
-                    <TouchableHiglight  onPress={()=>this.props.onReset()}  style={styles.breset}>
+                    <TouchableHighlight  onPress={()=>this.props.onReset()}  style={styles.breset}>
                         <Text style={styles.buttontext}>{this.props.name}</Text>
-                    </TouchableHiglight>
+                    </TouchableHighlight>
                 );
         }
+
 
     }
 }

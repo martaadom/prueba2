@@ -1,5 +1,5 @@
 import MyButton from "./MyButton";
-import {View, Text, StyleSheet, TouchableHiglight} from 'react-native';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import React from "react";
 
 export default class Actionbar extends React.Component {
@@ -8,7 +8,7 @@ export default class Actionbar extends React.Component {
         return (
 
             <View>
-                <MyButton lengthQuestions={this.props.lengthQuestions}
+                <MyButton lengthQuestions={this.props.lenghtQuestions}
                           currentQuestion={this.props.currentQuestion}
                           onChangeQuestion={this.props.onChangeQuestion}
                           onSubmit={this.props.onSubmit}
@@ -26,7 +26,8 @@ export default class Actionbar extends React.Component {
                           onSubmit={this.props.onSubmit}
                           questions={this.props.questions}
                           name="Next"/>
-                <MyButton name="Reset" onReset={this.props.onReset}/>
+                <MyButton name="Reset"
+                          onReset={this.props.onReset}/>
 
 
             </View>
